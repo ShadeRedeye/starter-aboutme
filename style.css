@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
+ html{
+   overflow: hidden;
+ }
+
+ body{
+   margin: 0px;
+   height: 0px;
+   padding: 0px;
+ }
+
+header {
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1px 20px;
+  background-color: rgba(18, 41, 77, 0.95);
+  z-index: 1;
+
+
+}
+
+li ,a, button {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 0.9em;
+  color: rgba(255, 84, 0, 0.98);
+  text-decoration: none;
+}
+
+.logo {
+  font-family: Style Script;
+  font-weight: 800;
+  font-size: 1.6em ;
+  color: rgb(239, 56, 255);
+  cursor: pointer;
+  margin-right:auto;
+}
+
+.nav_list {
+  list-style: none;
+}
+
+.nav_list li {
+  display: inline-block;
+  padding: 0px 8px;
+  transition: all 0.6s 0s ease;
+}
+
+.nav_list li a:hover {
+  color: rgb(227, 207, 23);
+  transition: all 0.3s 0s ease;
+}
+
+button{
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s 0s ease;
+  color: rgb(185, 69, 15);
+  font-weight: 900;
+  text-align: center;
+}
+
+button:hover{
+  background-color: rgb(82, 30, 157);
+  color: rgb(227, 207, 23);
+}
+
+.kontak{
+  margin-left: 10px;
+}
+
+ .parallax-wraper {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+ }
+
+ .padding-parallax::before{
+  content: "";
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-image:url("http://127.0.0.1:3000/Website/WebsiteKu/Mountain.svg");
+ }
