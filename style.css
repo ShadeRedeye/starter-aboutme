@@ -170,7 +170,6 @@ display: flex;
 
 .box-header{
   flex: 1;
-
   font-size: 1.3em;
   color: white;
   text-shadow: 2px 0 0 rgb(0, 0, 0);
@@ -201,20 +200,23 @@ display: flex;
   margin: 0px ;
   height: 65px;
   padding: 0px;
+  transform: rotatez(-5deg);
 }
 
 
 .box-child img {
   flex: 200;
   height: auto;
-  width: clamp(155px,20vw,200px);
+  width: clamp(140px,20vw,185px);
   margin: 0px;
   transition: 1s ease;
+
 }
 
 .box-child img:hover {
-  width: clamp(200px,20vw,200px);
+  width: clamp(155px,25vw,200px);
   transition: 1s ease;
+  filter: drop-shadow(1px 0.1rem 5px rgb(61, 54, 200));
 }
 .box-footer{
   font-size: 9px;
