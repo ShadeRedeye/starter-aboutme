@@ -200,7 +200,8 @@ display: flex;
   margin: 0px ;
   height: 65px;
   padding: 0px;
-  transform: rotatez(-5deg);
+  transform: rotatez(-3deg);
+  letter-spacing: -1px;
 }
 
 
@@ -210,7 +211,6 @@ display: flex;
   width: clamp(140px,20vw,185px);
   margin: 0px;
   transition: 1s ease;
-
 }
 
 .box-child img:hover {
@@ -218,13 +218,13 @@ display: flex;
   transition: 1s ease;
   filter: drop-shadow(1px 0.1rem 5px rgb(61, 54, 200));
 }
+
 .box-footer{
   font-size: 9px;
   color: white;
   color: rgba(255, 115, 46, 1);
   text-align: center;
 }
-
 
 .regular-wrapper{
   box-sizing: border-box;
