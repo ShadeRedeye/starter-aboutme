@@ -1,0 +1,327 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+:root{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+*{  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ ::-webkit-scrollbar {
+   width:0px;
+ }
+
+
+body{
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+
+/*kode navbar*/ 
+
+ nav{
+   position: sticky;
+   top: 0;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   min-height: 8vh;
+   background-color: hsl(208, 49%, 41%);
+   z-index: 2;
+ }
+
+ .Logo{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+ }
+
+ .nav-link {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   width: 40vw;
+   list-style: none;
+ }
+
+ .nav-link a {
+  color: hsl(0, 0%, 100%);
+  font-size: 1em;
+  font-weight: light;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+ }
+
+ .burger div {
+   margin: 4px;
+   height: 1px;
+   width: 20px;
+   background-color: hsl(0, 0%, 100%);
+   transition: all 0.3s ease;
+ }
+
+ .burger{
+   display: none;
+ }
+
+ @media screen and (max-width:1366px) {
+  .nav-link {
+    display: flex;
+    justify-content: space-around;
+    width: 30vw;
+  }
+ }
+
+ @media screen and (max-width:768px) {
+  .nav-link {
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 40px;
+    background-color: hsl(208, 49%, 41%);
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-out;
+  }
+
+  
+  .focus{
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    top: 0;
+    width: 100%;
+    background-color: hsl(208, 100%, 0%);
+    opacity: 0.5;
+    z-index: 1;
+    transition: 0.5s ease;
+  }
+
+.nav-link li {
+  opacity: 0;
+}
+  
+  .burger {
+    display: block;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+}
+
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.pencet .line1{
+  transform: rotate(-45deg) translateY(6px);
+}
+.pencet .line2{
+  opacity :0;
+}
+.pencet .line3{
+  transform: rotate(45deg) translateY(-6px);
+}
+/*kode navbar berakhir disini*/ 
+
+
+h1 {
+  font-size: 4em;
+  color: hsl(0, 0%, 100%);
+}
+
+
+.parralax-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  text-align: center;
+}
+
+.parralax-background img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.parralax-background > h1 {
+  margin: 20px;
+  text-align: center;
+}
+
+#gunung1 {
+  transform: scale(1.5) translateX(-20px) translateY(50px);
+}
+
+#gunung2 {
+  transform: scale(1.4) translateX(-20px) translateY(-320px);
+}
+
+.artikelIsi{
+  opacity: 0;
+}
+
+.teksMuncul{
+  animation: teksMuncul 1s ease forwards;
+}
+
+@keyframes teksMuncul {
+  from{
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes teksHilang {
+  from{
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+}
+.content-wrapper{
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-wrapper > .content-title {
+  height: 20vh;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-wrapper {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-content {
+  position: relative;
+  width: 30%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+@keyframes cardHilang {
+  from{
+    opacity: 1;
+    
+  }
+  to{
+    opacity: 0;
+  }
+}
+
+
+@keyframes cardMuncul {
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.card-content img{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  z-index: 1;
+  object-fit: contain;
+}
+
+.card-content > img::hover{
+  height: 220px;
+  width: 220px;
+}
+
+.content-title > h2{
+  color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width:768px) {
+.card-wrapper{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+}
+
+.animHeader{
+  animation: teksMuncul 2s ease forwards;
+}
+
+a:hover{
+  color: hsl(202, 65%, 65%);
+  transition: 0.4s ease;
+}
+
+a{
+  color: hsl(0, 0%, 100%);
+  transition: 0.4s ease;
+}

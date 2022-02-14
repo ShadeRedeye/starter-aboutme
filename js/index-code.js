@@ -18,7 +18,6 @@ window.addEventListener('scroll',function(){
     gunung2.style.top = value/3 * 1 + "px";
 
     for(i = 0; i < artikelIsi.length; i++){
-        
     let windowHeight = window.innerHeight;
     let revealTop = artikelIsi[i].getBoundingClientRect().top;
     let revealPoint = 45;
