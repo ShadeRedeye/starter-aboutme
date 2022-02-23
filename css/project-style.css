@@ -29,11 +29,18 @@ body {
 
 .body2 {
     width: 100%;
-    height: 20vh;
+    height: 15vh;
     background-color: hsl(224, 56%, 45%);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 20px;
 }
-
-
+.footer {
+    color: white;
+    font-family: 'Roboto Condensed';
+    letter-spacing: 5px;
+}
 .card-container{
     position: relative;
     height: 80vh;
@@ -234,7 +241,6 @@ body{
     }
 
     .content-isi button{
-
         transform: translateY(8px);
     }
  }
