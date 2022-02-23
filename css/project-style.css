@@ -2,8 +2,255 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 @import url('navbar.css');
 
+::-webkit-scrollbar{
+    width: 0px;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    overflow-y: scroll;
+}
+
+.body1{
+    width: 100%;
+    height: 100vh;
+    background:radial-gradient(circle at 98% 0%, rgba(115, 184, 220, 1) 0%, rgba(90, 127, 197, 1) 25%, rgba(14, 29, 60, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.body2 {
+    width: 100%;
+    height: 20vh;
+    background-color: hsl(224, 56%, 45%);
+}
+
+
+.card-container{
+    position: relative;
+    height: 80vh;
+    width: 53vw;
+    display: flex;
+    overflow:hidden;
+    align-items: center;
+    flex-direction: row;
+    padding: 200px;
+    gap: 15px;
+    scroll-behavior: smooth;  
+    -webkit-mask-image: radial-gradient(ellipse 98% 1000% at 50% 50%, black 47%, transparent 50%);
+    mask-image: radial-gradient(ellipse 95% 100% at 50% 50%, black 47%, transparent 50%);
+  }
+
+
+.card-content{
+    min-width: 200px;
+    height: 50vh;
+    background-color: rgb(30, 38, 75);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1.5s ease;
+    opacity: 0.9;
+    z-index: 0;
+}
+
+.card-click {
+    background-color: rgb(109, 143, 189);
+    min-width: 300px;
+    transform: scale(1.2) translateX(-75px);
+    opacity: 1;
+    z-index: 1;
+}
+
+.content-isi{
+    height: 100%;
+    width: 75%;
+    background-color: rgb(184, 23, 50);
+    z-index: 1;
+    transform: translateX(350px);
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.content-isi-reveal{
+    animation: contentReveal 1s ease forwards;
+}
+
+.content-isi-hidden{
+    animation: contentHidden 1s ease forwards;
+}
+
+
+@keyframes contentReveal {
+    from{
+    opacity: 0;
+    transform: translateX(350px);
+    }
+    to{
+    opacity: 1;
+    transform: translateX(200px);
+    }
+}
+
+@keyframes contentHidden {
+    from{
+    opacity: 1;
+    transform: translateX(150px);
+    }
+    to{
+        
+    opacity: 0;
+    transform: translateX(350px);
+    }
+}
+
+.content-isi::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;  
+    background-color: inherit;
+    clip-path: polygon(55% 0, 100% 0%, 100% 100%, 54% 100%, 29% 50%);
+    transform: translate(-160px);
+    z-index: 0;
+}
+
+.content-isi h1,p,button{
+    z-index: 3;
+    color: rgb(226, 226, 226);
+}
+
+.content-isi h1{
+    padding-bottom: 8px;
+    font-family: 'Roboto Condensed';
+    font-size: 1.5em;
+}
+
+.content-isi p {
+    padding-bottom: 10px;
+}
+
+
+@media screen and (max-width:768px){ 
+
+body{
+    overflow-x: hidden;
+}
+    .card-click {
+        min-width: 300px;
+        transform: scale(1.2) translateY(-55px);
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .body1{
+        height: 200vh;
+    }
+
+    .card-container{
+        height: 200vh;
+        padding: 85px;
+        -webkit-mask-image: radial-gradient(ellipse 100% 1000% at 50% 50%, black 40%, transparent 60%);
+        mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 40%, transparent 60%);
+
+    }
+
+    .card-content{
+        min-width: 200px;
+        height: 40%;
+    }
+
+    @keyframes contentReveal {
+        from{
+        opacity: 0;
+        transform: translateY(350px);
+        }
+        to{
+        opacity: 1;
+        transform: translateY(150px);
+        }
+    }
+    
+    @keyframes contentHidden {
+        from{
+            opacity: 1;
+           
+            transform: translateY(150px);
+            }
+            to{
+            opacity: 0;
+            transform: translateY(350px);
+            }
+    }
+
+    .content-isi::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;  
+        background-color: inherit;
+        clip-path: polygon(0 100%, 0 80%, 50% 55%, 100% 80%, 100% 100%);
+        pointer-events: none;
+        transform: translateY(-200px);
+        z-index: 0;
+    }
+
+    .content-isi{
+        height: 60%;
+        width: 100%;
+        background-color: rgb(184, 23, 50);
+        z-index: 1;
+        transform: translateX(350px);
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        opacity: 0;
+    }
+    .content-isi h1{
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .content-isi p {
+        overflow-y: scroll;
+        padding-bottom: 10px;
+    }
+
+    .content-isi button{
+
+        transform: translateY(8px);
+    }
+ }
+    
+   .content-isi button{
+       padding: 2px;
+       width: 60px;
+       color: rgb(170, 49, 69);
+       font-family: 'Nunito';
+       font-weight: bold;
+       letter-spacing: 2px;
+       transition: 0.3s ease;
+        border: 0;
+   }
+
+   .content-isi button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(170, 49, 69);
 }

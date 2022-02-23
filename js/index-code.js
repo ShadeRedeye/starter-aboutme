@@ -16,7 +16,7 @@ window.addEventListener('scroll',function(){
     for(i = 0; i < artikelIsi.length; i++){
     let windowHeight = window.innerHeight;
     let revealTop = artikelIsi[i].getBoundingClientRect().top;
-    let revealPoint = 45;
+    let revealPoint = 40;
     
     if(revealTop < windowHeight - revealPoint 
 
@@ -41,7 +41,7 @@ window.addEventListener('scroll',function(){
         else {
             kartu.style.animation = `cardHilang 1s ease forwards`
         }
-
+        
     })
 
 });
