@@ -10,7 +10,6 @@ if (windowres.matches){
     scrollcard = 220;
 }
 
-
 card.forEach((card,cardI) => {
     card.addEventListener('click', () =>{
         removeCard()
@@ -18,7 +17,7 @@ card.forEach((card,cardI) => {
         card.classList.add('card-click');
         setTimeout(() => {
         expand[cardI].classList.add('content-isi-reveal');
-        }, 400);
+        }, 300);
     })
 });
 
