@@ -4,10 +4,15 @@ let windowres = window.matchMedia('(max-width: 768px)');
 let scrollcard = 0;
 let expand = document.querySelectorAll('.content-isi');
 
+
+
+
 if (windowres.matches){
     scrollcard = 215;
+    container.scrollLeft = 220;
 }else{
     scrollcard = 220;
+    container.scrollLeft = 160;
 }
 
 card.forEach((card,cardI) => {
@@ -17,7 +22,7 @@ card.forEach((card,cardI) => {
         card.classList.add('card-click');
         setTimeout(() => {
         expand[cardI].classList.add('content-isi-reveal');
-        }, 300);
+        }, 600);
     })
 });
 

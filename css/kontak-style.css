@@ -1,0 +1,109 @@
+@import url('./navbar.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body1{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bg{
+    height: 50%;
+    width: 100%;
+    background-color: rgb(50, 82, 117);
+}
+
+.bottom-bg{
+    height: 50%;
+    width: 100%;
+    background-color: rgb(28, 53, 82);
+    display: flex;
+    justify-content: center;
+}
+
+.button-wrapper{
+    height: 20vh;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-60px);
+    gap:2vw
+}
+
+.buttonSM{
+    position: relative;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(50, 82, 117);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease;
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+
+#facebook img{
+    height: 100px;
+    width: 100px;
+    filter: invert();
+}
+
+#linkedin img{
+    height: 50px;
+    width: 50px;
+    filter: invert();
+}
+
+#github img{
+    height: 65px;
+    width: 65px;
+    filter: invert();
+    transform: translateY(5px);
+}
+
+#facebook{
+    background-color: rgb(34, 65, 240);
+}
+
+#linkedin{
+    background-color: rgb(251, 208, 63);
+}
+
+#github{
+    background-color:  rgb(31, 209, 61);
+}
+
+#facebook:hover,#linkedin:hover,#github:hover{
+    filter: brightness(0.5);
+    transition: 0.5s ease;
+}
+
+@keyframes buttonReveal {
+    0%{
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    60%{
+        transform: translateY(-20px);
+    }
+    85%{
+        
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
